@@ -1,0 +1,89 @@
+body {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 0px 0px 10px #00aaff;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.message {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+#surpriseBtn {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#hiddenMessage {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Big Cake Emoji */
+.cake {
+    font-size: 10rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.flame {
+    display: inline-block;
+    font-size: 5rem;
+    animation: flicker 0.3s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.8; transform: scale(1.1); }
+}
+
+/* Balloons */
+.balloons {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 70px;
+    background: red;
+    border-radius: 50%;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    from { transform: translateY(100vh); opacity: 1; }
+    to { transform: translateY(-10vh); opacity: 0; }
+}
